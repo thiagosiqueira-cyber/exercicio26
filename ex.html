@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="ex.js"></script>
+<body>
+    <h2>1. Tabuada</h2>
+    <input type="number" id="num" placeholder="Digite um número">
+    <button onclick="exibirTabuada()">Exibir Tabuada</button>
+    <div id="resultado"></div>
+
+    <script>
+        function exibirTabuada() {
+            const num = document.getElementById("num").value;
+            const resultado = document.getElementById("resultado");
+            let tabuada = "<h3>Tabuada do " + num + ":</h3><ul>";
+
+            for (let i = 1; i <= 10; i++) {
+                tabuada += "<li>" + num + " x " + i + " = " + (num * i) + "</li>";
+            }
+
+            tabuada += "</ul>";
+            resultado.innerHTML = tabuada;
+        }
+    </script>
+
+    <h2>2. Números Pares</h2>
+    <input type="number" id="limite" placeholder="Digite um número">
+    <button onclick="exibirPares()">Exibir Números Pares</button>
+    <div id="resultado-pares"></div>
+
+    <script>
+        function exibirPares() {
+            const limite = document.getElementById("limite").value;
+            const resultado = document.getElementById("resultado-pares");
+            let pares = "<h3>Números Pares de 1 a " + limite + ":</h3><ul>";
+
+            for (let i = 2; i <= limite; i += 2) {
+                pares += "<li>" + i + "</li>";
+            }
+
+            pares += "</ul>";
+            resultado.innerHTML = pares;
+        }
+    </script>
+
+    <h2>3.Soma de intervalos</h2>
+     <input type="number" id="n-soma" value="100" />
+  <button onclick="calcSoma()">Calcular</button>
+  <p id="r-soma"></p>
+  
+  <h2> 4. Fatorial</h2>
+    <input type="number" id="n-fatorial" value="5" />
+    <button onclick="calcFatorial()">Calcular</button>
+    <p id="r-fatorial"></p>
+    
+    <h2>5. Verificador de números primos</h2>
+    <button onclick="verificarPrimo()">Verificar</button>
+    <input type="number" id="n-primo" value="7" />
+    <p id="r-primo"></p>
+
+</body>
+</html>
